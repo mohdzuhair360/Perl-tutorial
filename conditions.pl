@@ -20,6 +20,8 @@ my $claims = <STDIN>;
 
 #print "$job = '$job'";
 chomp $job;
+#default variable name has \n behind. chomp erase the new line
+
 say "Dear Mr ", $name;
 if (($job eq 'engineer') && ($level <3)){
     say "Your total salary = RM ", (100 * $days) + ($target * 5) + ($claims * 20);
@@ -38,4 +40,8 @@ elsif (($job eq 'clerk')&& ($level >=3 && $level <6)){
 }
 elsif (($job eq 'clerk')&& ($level >= 6)){
     say "Your total salary = RM ", (110 * $days) + ($target * 5) + ($claims * 20);
+}
+
+unless ($days <=10){
+    say "Too many absentees. You have been warned";
 }
