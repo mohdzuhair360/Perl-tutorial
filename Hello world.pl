@@ -1,4 +1,4 @@
 use strict;
 use warnings;
 
-print "hi NAME\n";
+print "hi pretty\n";
